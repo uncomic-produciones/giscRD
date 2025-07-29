@@ -6,6 +6,7 @@ import { HeroHeader } from "@/components/hero8-header";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 
+
 export default function HeroSection() {
   return (
     <>
@@ -61,50 +62,51 @@ export default function HeroSection() {
               <div className="relative py-6 md:w-[calc(100%-11rem)]">
                 <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-8 w-fit "
-                      src="/logo/banco-popular-seeklogo.png"
-                      alt="Nvidia Logo"
-                      height="20"
-                      width="auto"
-                    />
+                    <Image
+  className="mx-auto h-8 w-fit"
+  src="/logo/banco-popular-seeklogo.png"
+  alt="Nvidia Logo"
+  height={32} // Converted h-8 (8 * 4 = 32px)
+  width={100} // Example width, you'll need to set a specific width as 'auto' is not directly supported
+/>
                   </div>
 
                   <div className="flex">
-                    <img
-                      className="mx-auto h-12 w-40 "
-                      src="/logo/banco-santa-cruz-logo-png_seeklogo-193203-R.png"
-                      alt="Column Logo"
-                      height="16"
-                      width="auto"
-                    />
+                    <Image
+  className="mx-auto h-8 w-fit"
+  src="/logo/banco-santa-cruz-logo-png_seeklogo-193203-R.png"
+  alt="Nvidia Logo"
+  height={32} // Converted h-8 (8 * 4 = 32px)
+  width={100} // Example width, you'll need to set a specific width as 'auto' is not directly supported
+/>
                   </div>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-10 w-6 w-fit "
-                      src="/logo/densea-r.png"
-                      alt="GitHub Logo"
-                      height="16"
-                      width="auto"
-                    />
+                   
+                    <Image
+  className="mx-auto h-8 w-fit"
+  src="/logo/densea-r.png"
+  alt="Nvidia Logo"
+  height={32} // Converted h-8 (8 * 4 = 32px)
+  width={100} // Example width, you'll need to set a specific width as 'auto' is not directly supported
+/>
                   </div>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-10 w-6 w-fit "
-                      src="/logo/TCIS.png"
-                      alt="GitHub Logo"
-                      height="16"
-                      width="auto"
-                    />
+                    <Image
+  className="mx-auto h-8 w-fit"
+  src="/logo/TCIS.png"
+  alt="Nvidia Logo"
+  height={32} // Converted h-8 (8 * 4 = 32px)
+  width={100} // Example width, you'll need to set a specific width as 'auto' is not directly supported
+/>
                   </div>
                   <div className="flex">
-                    <img
-                      className="mx-auto h-10 w-fit "
-                      src="/logo/dentomediaj.png"
-                      alt="Nike Logo"
-                      height="20"
-                      width="auto"
-                    />
+                      <Image
+  className="mx-auto h-8 w-fit"
+  src="/logo/dentomediaj.png"
+  alt="Nvidia Logo"
+  height={32} // Converted h-8 (8 * 4 = 32px)
+  width={100} // Example width, you'll need to set a specific width as 'auto' is not directly supported
+/>
                   </div>
                   
 

@@ -1,5 +1,4 @@
-import { cn } from '@/lib/utils'
-import { motion } from 'motion/react'
+
 import Image from "next/image";
 
 export const Logo = ({ className }: { className?: string }) => {
@@ -10,6 +9,7 @@ export const Logo = ({ className }: { className?: string }) => {
                 alt="Abstract Object"
                 height="100"
                 width="100"
+                className={className} // Use the className prop here
               />
     )
 }
@@ -22,6 +22,7 @@ export const LogoStroke = ({ className }: { className?: string }) => {
                 alt="Abstract Object"
                 height="100"
                 width="100"
+                className={className} // Use the className prop here
               />
     )
 }

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface ProjectType {
   title: string;
@@ -76,9 +77,7 @@ interface ProjectModalProps {
 
 // Componente del Modal
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
-  if (!project) return null;
-
-  // Cierra el modal si se presiona la tecla Escape
+  // Move useEffect here, before the conditional return
   useEffect(() => {
     const handleEsc = (event: { keyCode: number; }) => {
       if (event.keyCode === 27) {
@@ -91,6 +90,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
     };
   }, [onClose]);
 
+  if (!project) return null; // Now the useEffect is always called
+
   return (
     <div 
       className="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center p-4 transition-opacity duration-300"
@@ -101,7 +102,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         onClick={e => e.stopPropagation()} // Evita que el clic dentro del modal lo cierre
       >
         <div className="relative">
-            <img src={project.imageUrl} alt={`Imagen de ${project.title}`} className="w-full h-64 object-cover rounded-t-2xl"/>
+            <Image
+    src={project.imageUrl}
+    alt={`Imagen de ${project.title}`}
+    fill // This makes the image fill its parent container
+    className="object-cover rounded-t-2xl" // Keep your object-cover and styling
+  />
             <button onClick={onClose} className="absolute top-4 right-4 bg-white/50 dark:bg-black/50 rounded-full p-2 text-zinc-800 dark:text-zinc-200 hover:bg-white dark:hover:bg-black focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
@@ -181,11 +187,13 @@ export default function Features() {
                 <Card className="transform transition-transform duration-300 group-hover:scale-105 shadow-lg dark:bg-zinc-800/50 border dark:border-zinc-700/50 overflow-hidden rounded-xl h-full">
                   <CardHeader className="p-0">
                     <div className="flex h-48 w-full items-center justify-center overflow-hidden">
-                      <img
-                        src={project.imageUrl}
-                        alt={`Imagen del proyecto ${project.title}`}
-                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
+                     <Image
+  src={project.imageUrl}
+  alt={`Imagen del proyecto ${project.title}`}
+  width={600} // Example width, adjust as needed
+  height={192} // Equivalent to h-48 (48 * 4 = 192px), adjust as needed
+  className="object-cover transition-transform duration-500 group-hover:scale-110"
+/>
                     </div>
                   </CardHeader>
                   <CardContent className="p-6 text-center">
