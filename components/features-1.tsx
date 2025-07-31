@@ -126,7 +126,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 
   return (
     <div 
-      className="fixed inset-0 bg-black bg-opacity-60 z-50 flex justify-center items-center p-4 transition-opacity duration-300"
+      className="fixed inset-0 bg-black/90 z-50 flex justify-center items-center p-4 transition-opacity duration-300"
       onClick={onClose} // Cierra el modal al hacer clic en el fondo
     >
       <div 
