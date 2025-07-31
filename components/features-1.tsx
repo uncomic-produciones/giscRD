@@ -46,7 +46,7 @@ const projects: ProjectType[] = [
     imageUrl: "/img/contract-1464917_1280.jpg",
     downloadUrl: "/DOC/GSC Leasing Interactive nuevo.pdf",
     features: [
-        "Simulador de cotizaciones y generación de tablas de amortización.",
+        "Simulador de cotizaciones y generación de tablas de amortización. ",
         "Gestión de órdenes de compra y pago.",
         "Control de activos como edificaciones, maquinaria y vehículos.",
         "Módulo de cobranza con cálculo de intereses moratorios.",
