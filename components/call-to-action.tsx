@@ -22,6 +22,9 @@ export default function CallToAction() {
                 <span>Solicita una Cotización</span>
             </Button>
           </div>
+          <p className="mt-4">
+  Correo: <a href="mailto:global@giscrd.com">global@giscrd.com</a>
+</p>
         </div>
       </div>
     </section>
