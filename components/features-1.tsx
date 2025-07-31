@@ -175,6 +175,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
 export default function Features() {
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<ProjectType | null>(null);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Ensure component is mounted before manipulating DOM
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleOpenModal = (project: ProjectType) => {
     setSelectedProject(project);
@@ -186,14 +192,21 @@ export default function Features() {
     setSelectedProject(null);
   };
   
-  // Evita el scroll del body cuando el modal está abierto
+  // Only manipulate body overflow after component is mounted
   useEffect(() => {
+    if (!isMounted) return;
+    
     if (isModalOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-  }, [isModalOpen]);
+
+    // Cleanup function to restore scroll when component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isModalOpen, isMounted]);
 
 
   return (
