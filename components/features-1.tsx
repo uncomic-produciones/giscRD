@@ -68,6 +68,38 @@ const projects: ProjectType[] = [
         "Interfaz móvil para supervisores en campo."
     ]
   },
+  {
+  "title": "Sistema de Licitación Interactive",
+  "description": "Genere y gestione licitaciones de forma eficiente. Controle clientes, suplidores y artículos, convierta solicitudes en facturas y administre las cuentas por cobrar y por pagar.",
+  "imageUrl": "/img/WhatsApp Image 2025-07-31 at 10.16.30 PM (1).jpeg",
+  "downloadUrl": "/DOC/Licitacion Interactive (1).pdf",
+  "features": [
+    "Generación rápida de formatos para licitaciones.",
+    "Gestión de clientes, suplidores y catálogo de artículos.",
+    "Emisión de conduces para entrega de productos.",
+    "Conversión de solicitud a factura con generación de Cuentas por Cobrar (CxC).",
+    "Control de consecutivos de Números de Comprobante Fiscal (NCF).",
+    "Generación y gestión de Cuentas por Pagar (CxP).",
+    "Reportes de antigüedad de saldos para CxC y CxP.",
+    "Seguimiento y reportes del estado de las licitaciones (ganadas, perdidas, en curso)."
+  ]
+},
+ {
+  "title": "Sistema de Facturación Electrónica Interactive",
+  "description": "Genere facturas de forma rápida y eficiente, administre clientes, suplidores y servicios. Gestione Cuentas por Cobrar y Pagar, controle los NCF y prepárese para la facturación electrónica con la DGII.",
+  "imageUrl": "/img/WhatsApp Image 2025-07-31 at 10.16.30 PM.jpeg",
+  "downloadUrl": "/DOC/Licitacion Interactive (1).pdf",
+  "features": [
+    "Generación rápida y eficiente de facturas.",
+    "Control de clientes, suplidores y catálogo de servicios.",
+    "Conversión de solicitudes a facturas.",
+    "Gestión de Cuentas por Cobrar (CxC) y Cuentas por Pagar (CxP).",
+    "Reportes de antigüedad de saldos por cobrar y por pagar.",
+    "Control de consecutivos de Números de Comprobante Fiscal (NCF).",
+    "Reportes para seguimiento del estado de las solicitudes.",
+    "Próximamente: Interfaz con la DGII para facturación electrónica."
+  ]
+}
 ];
 
 interface ProjectModalProps {
@@ -102,12 +134,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         onClick={e => e.stopPropagation()} // Evita que el clic dentro del modal lo cierre
       >
         <div className="relative">
-            <Image
-    src={project.imageUrl}
-    alt={`Imagen de ${project.title}`}
-    fill // This makes the image fill its parent container
-    className="object-cover rounded-t-2xl" // Keep your object-cover and styling
-  />
+          <Image
+  src={project.imageUrl}
+  alt={`Imagen de ${project.title}`}
+  width={500} // Ancho de la imagen en píxeles
+  height={300} // Alto de la imagen en píxeles
+  className="w-full h-auto object-cover rounded-t-2xl" // Ajusta las clases para responsividad
+/>
             <button onClick={onClose} className="absolute top-4 right-4 bg-white/50 dark:bg-black/50 rounded-full p-2 text-zinc-800 dark:text-zinc-200 hover:bg-white dark:hover:bg-black focus:outline-none focus:ring-2 focus:ring-indigo-500">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
