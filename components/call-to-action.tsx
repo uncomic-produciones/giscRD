@@ -23,7 +23,7 @@ export default function CallToAction() {
             </Button>
           </div>
           <p className="mt-4">
-  Correo: <a href="mailto:global@giscrd.com">global@giscrd.com</a>
+  Correo: <a href="mailto:global@giscrd.com" className="text-blue-500 underline">global@giscrd.com</a>
 </p>
         </div>
       </div>
