@@ -29,7 +29,7 @@ const projects: ProjectType[] = [
   {
     title: "Sistema de Habilitación de Almacenes",
     description: "Gestione inventarios como garantía para financiamiento. Controle entradas, salidas y pignoración de almacenes en tiempo real.",
-    imageUrl: "/img/interior-del-gran-almacen-de-distribucion-con-estantes-apilados-con-paletas-y-productos-listos-para-el-mercado.jpg",
+    imageUrl: "/img/0eac3f84-b4f0-4f55-aad7-ff03fa01111c.jpeg",
     downloadUrl: "/DOC/GSC Habilitacion de Almacenes_brochure.pdf",
     features: [
       "Control de inventario en tiempo real mediante app móvil.",
@@ -57,7 +57,7 @@ const projects: ProjectType[] = [
   {
     title: "Sistema de Descarga de Barcos",
     description: "Coordine y controle la descarga de mercancía de buques, administre el Bill of Lading, la distribución y el transporte terrestre.",
-    imageUrl: "/img/viejos-barcos-en-un-puerto-y-un-muelle-en-la-noche.jpg",
+    imageUrl: "/img/f35e19a7-c8b7-4873-9e03-6862c60ae6f5.jpeg",
     downloadUrl: "/DOC/Sistema de Descarga de Barcos Interactive.pdf",
     features: [
         "Gestión de ingreso de buques y bodegas.",
