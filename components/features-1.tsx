@@ -13,7 +13,7 @@ interface ProjectType {
 // Datos de los proyectos enriquecidos con más detalles para el modal.
 const projects: ProjectType[] = [
   {
-    title: "Factoring Interactive",
+    title: "Sistema de Factoring Interactive",
     description: "Administre su negocio de factoraje, gestione líneas de crédito, cobranza y contabilidad para optimizar la liquidez de los proveedores.",
     imageUrl: "/img/primer-plano-de-hombre-de-negocios-con-tableta-digital.jpg",
     downloadUrl: "/DOC/GSC Factoring Interactive.pdf",
@@ -41,7 +41,7 @@ const projects: ProjectType[] = [
     ]
   },
   {
-    title: "Leasing Interactive",
+    title: "Sistema de Leasing Interactive",
     description: "Automatice las operaciones de su empresa de arrendamiento. Genere cotizaciones, tablas de amortización, facturación y gestione la cobranza.",
     imageUrl: "/img/contract-1464917_1280.jpg",
     downloadUrl: "/DOC/GSC Leasing Interactive nuevo.pdf",
