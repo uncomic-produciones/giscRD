@@ -16,7 +16,7 @@ const projects: ProjectType[] = [
     title: "Sistema de Factoring Interactive",
     description: "Administre su negocio de factoraje, gestione líneas de crédito, cobranza y contabilidad para optimizar la liquidez de los proveedores.",
     imageUrl: "/img/primer-plano-de-hombre-de-negocios-con-tableta-digital.jpg",
-    downloadUrl: "/DOC/GSC Factoring Interactive.pdf",
+    downloadUrl: "/DOC/Propuesta - Factoring Confirming New.pdf",
     features: [
       "Gestión de líneas de crédito para descuento de facturas.",
       "Contabilidad en línea por cada operación realizada.",
@@ -44,7 +44,7 @@ const projects: ProjectType[] = [
     title: "Sistema de Leasing Interactive",
     description: "Automatice las operaciones de su empresa de arrendamiento. Genere cotizaciones, tablas de amortización, facturación y gestione la cobranza.",
     imageUrl: "/img/contract-1464917_1280.jpg",
-    downloadUrl: "/DOC/GSC Leasing Interactive nuevo.pdf",
+    downloadUrl: "/DOC/Presentación del Sistema Leasing.pdf",
     features: [
         "Simulador de cotizaciones y generación de tablas de amortización. ",
         "Gestión de órdenes de compra y pago.",
